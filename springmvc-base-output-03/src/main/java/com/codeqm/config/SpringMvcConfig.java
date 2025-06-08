@@ -12,7 +12,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @description:
  */
 @Configuration
-@ComponentScan(value = {"com.codeqm.jsp"})
+@ComponentScan(value = {
+        "com.codeqm.jsp",
+        "com.codeqm.json"
+})
 @EnableWebMvc
 public class SpringMvcConfig implements WebMvcConfigurer {
     //配置jsp对应的视图解析器
