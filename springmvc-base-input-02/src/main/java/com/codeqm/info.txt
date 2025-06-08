@@ -1,0 +1,27 @@
+# 小结
+
+接受数据
+
+  1. 路径设置
+  2. 接收参数
+    param
+      直接接收参数（Spring版本高时，需要注解指定参数名）：@RequestParam("paramName") String paramValue
+      一名多值：handler(@RequestParam List key)
+      实体接收：handler(实体类 对象) 对象的属性名与请求参数名一致
+    path
+      1. 设置动态路径和标识："/path/{id}/info/{name}"
+      2. 接收参数：@PathVariable("id") String id, @PathVariable("name") String name
+    json
+      数据接收 handler(@RequestBody 实体类 对象)
+      准备工作：
+        1. 添加依赖：jackson-databind
+        2. 添加注解：@EnableWebMvc
+  3. cookie接收
+    handler(@CookieValue("cookieName") String cookieValue)
+  4. 请求头接收
+    handler(@RequestHeader("headerName") String headerValue)
+  5. 原生api获取
+    handler(HttpServletRequest, HttpServletResponse, HttpSession)
+    ServletContext -> ioc -> 全局变量 @Autowired
+  6. 共享域获取
+    原生api方式
