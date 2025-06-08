@@ -11,6 +11,7 @@
     <modules>
         <module>springmvc-base-quick-01</module>
         <module>springmvc-base-input-02</module>
+        <module>springmvc-base-output-03</module>
     </modules>
 
     <properties>
@@ -49,6 +50,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.18.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
 </project>
