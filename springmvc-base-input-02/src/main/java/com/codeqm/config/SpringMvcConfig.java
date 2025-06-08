@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
  * @description:
  */
 @Configuration
-@ComponentScan("com.codeqm.param")
+@ComponentScan(value = {"com.codeqm.param", "com.codeqm.path"})
 public class SpringMvcConfig {
     @Bean
     public RequestMappingHandlerMapping requestMappingHandlerMapping() {
