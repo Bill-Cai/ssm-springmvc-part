@@ -15,6 +15,12 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
  */
 @EnableWebMvc  // json数据处理, 必须使用此注解, 因为他会加入json处理器
 @Configuration
-@ComponentScan(value = {"com.codeqm.param", "com.codeqm.path", "com.codeqm.json", "com.codeqm.cookie"})
+@ComponentScan(value = {
+        "com.codeqm.param",
+        "com.codeqm.path",
+        "com.codeqm.json",
+        "com.codeqm.cookie",
+        "com.codeqm.header",
+})
 public class SpringMvcConfig implements WebMvcConfigurer {
 }
