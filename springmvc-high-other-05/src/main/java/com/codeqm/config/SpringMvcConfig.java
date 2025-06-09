@@ -1,8 +1,10 @@
 package com.codeqm.config;
 
+import com.codeqm.interceptor.MyInterceptor;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -17,4 +19,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 })
 @EnableWebMvc
 public class SpringMvcConfig implements WebMvcConfigurer {
+    // 添加拦截器
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        // 将拦截器添加到Springmvc环境, 默认拦截所有Springmvc分发的请求
+        registry.addInterceptor(new MyInterceptor());
+    }
 }
